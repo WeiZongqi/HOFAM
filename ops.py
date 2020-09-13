@@ -18,7 +18,13 @@ class batch_norm(object):
         return tf.contrib.layers.layer_norm(x, center=True, scale=True, scope=self.name)  #tf.contrib.layers.batch_norm(x, decay=self.momentum, updates_collections=None, epsilon=self.epsilon, scale=True, scope=self.name)#, begin_norm_axis=1, begin_params_axis=-1
 
 
+def get_fg0(y_true):
+    a1 = tf.constant(value=200 / 255.0, shape=[1, 256, 256, 1], dtype=y_true.dtype)
 
+    a1_get_fg = tf.greater(y_true,a1)
+    a1_get_fg = tf.cast(a1_get_fg, tf.float32)
+    y_true = tf.multiply(a1_get_fg, y_true)
+    return y_true
 #denoise
 def get_fg(y_true):
     a1 = tf.constant(value=200 / 255.0, shape=[16, 256, 256, 1], dtype=y_true.dtype)

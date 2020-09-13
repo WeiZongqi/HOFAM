@@ -15,7 +15,7 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "0,1"
 parser = argparse.ArgumentParser(description='')
 parser.add_argument('--dataset_name', dest='dataset_name', default='ChangeDetection', help='name of the dataset')
 parser.add_argument('--', dest='epoch', type=int, default=16000, help='# of epoch')
-parser.add_argument('--batch_size', dest='batch_size', type=int, default=16, help='# images in batch')
+parser.add_argument('--batch_size', dest='batch_size', type=int, default=1, help='# images in batch')
 parser.add_argument('--train_size', dest='train_size', type=int, default=1e8, help='# images used to train')
 parser.add_argument('--load_size', dest='load_size', type=int, default=286, help='scale images to this size')
 parser.add_argument('--fine_size_H', dest='fine_size_H', type=int, default=256, help='then crop to this size')
@@ -31,7 +31,7 @@ parser.add_argument('--niter', dest='niter', type=int, default=10, help='# of it
 parser.add_argument('--beta1', dest='beta1', type=float, default=0.5, help='momentum term of adam')
 parser.add_argument('--flip', dest='flip', type=bool, default=True, help='if flip the images for data argumentation')
 parser.add_argument('--which_direction', dest='which_direction', default='AtoB', help='AtoB or BtoA')
-parser.add_argument('--phase', dest='phase', default='train', help='train, test')
+parser.add_argument('--phase', dest='phase', default='demo', help='train, test')
 parser.add_argument('--save_epoch_freq', dest='save_epoch_freq', type=int, default=50, help='save a model every save_epoch_freq epochs (does not overwrite previously saved models)')
 parser.add_argument('--save_latest_freq', dest='save_latest_freq', type=int, default=600, help='save the latest model every latest_freq sgd iterations (overwrites the previous latest model)')
 parser.add_argument('--print_freq', dest='print_freq', type=int, default=50, help='print the debug information every print_freq iterations')
@@ -71,8 +71,10 @@ def main(_):
 
         if args.phase == 'train':
             model.train(args)
-        else:
+        elif args.phase == 'test':
             model.test(args)
+        else:
+            model.demo(args)
 
 if __name__ == '__main__':
     tf.app.run()
