@@ -1,7 +1,7 @@
 # Hierarchical Optical Flow Attention Model (HOFAM)
 HOFAM: Hierarchical Optical Flow Attention Model for Cross Scene Foreground Detection
 
-![](./test_0055.png)
+![](https://weizongqi.github.io/HOFAM/show/test_0055.png)
 
 ## demo
 
