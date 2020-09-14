@@ -3,6 +3,10 @@ HOFAM: Hierarchical Optical Flow Attention Model for Cross Scene Foreground Dete
 
 ![](https://weizongqi.github.io/HOFAM/show/test_0055.png)
 
+## install
+
+Code uses Tensorflow 1.13, CUDN 10.1.
+
 ## demo
 
 You need download [checkpoint](https://drive.google.com/file/d/1RodI2WjeG7X28T1kSTRppGmvSX95CUO8/view?usp=sharing) first, and place it in checkpoint/(here)
