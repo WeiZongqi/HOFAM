@@ -44,5 +44,10 @@ $ run main.py
 4. Change --phase(train or test) in main.py and run main.py
 ```
 
+## Structure
+The structure of the proposed Hierarchical Optical Flow Attention Model (HOFAM).
+![HOFAM](/show/hofam.png)
 
+ Comparison to the baseline on DOTA for oriented object detection with ResNet-101. The figures with blue boxes are the results of the baseline and pink boxes are the results of our proposed CG-Net.
+![Attention module in HOFAM](/show/atten.png)
 
