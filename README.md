@@ -20,6 +20,7 @@ The structure of the proposed Hierarchical Optical Flow Attention Model (HOFAM).
 ## Experiment
 
 |Method|Mean Dice|Recall|Precision|F-measure|Model Types|
+|:---:|:---:|:---:|:---:|:---:|:---:|
 |HOFAM|0.9466|0.9661|0.9893|0.9776||
 
 
