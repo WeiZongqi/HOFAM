@@ -1,11 +1,17 @@
-# Hierarchical Optical Flow Attention Model (HOFAM)
-HOFAM: Hierarchical Optical Flow Attention Model for Cross Scene Foreground Detection
+# Robust Cross-Scene Foreground Segmentation in Surveillance Video
+
+ We integrate dual modalities (foregrounds' motion and appearance), and then eliminating features without representativeness of foreground through attention-module-guided selective-connection structures. It is in an end-to-end training manner and to achieve scene adaptation in the plug and play style. Experiments indicate the proposed method significantly outperforms the state-of-the-art deep models and background subtraction methods in untrained scenes -- LIMU and LASIESTA.
+
+****
+## Introduction
+Our work is based on our group accepeted work foreground segmentation model [STAM](https://www.mdpi.com/1424-8220/19/23/5142). Code uses Tensorflow 1.13, CUDN 10.1.
 
 ![](https://weizongqi.github.io/HOFAM/show/test_0055.png)
 
-## install
+## Results
 
-Code uses Tensorflow 1.13, CUDN 10.1.
+
+
 
 ## demo
 
