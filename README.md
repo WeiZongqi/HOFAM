@@ -6,14 +6,22 @@
 ## Introduction
 Our work is based on our group accepeted work foreground segmentation model [STAM](https://www.mdpi.com/1424-8220/19/23/5142). Code uses Tensorflow 1.13, CUDN 10.1.
 
-![](https://weizongqi.github.io/HOFAM/show/test_0055.png)
+![Video Frame / Ground True / Optical flow / Foreground segmentation Result](https://weizongqi.github.io/HOFAM/show/test_0055.png)
 
-## Results
+## Structure
+The structure of the proposed Hierarchical Optical Flow Attention Model (HOFAM).
+![HOFAM](/show/hofam.png)
+
+ Comparison to the baseline on DOTA for oriented object detection with ResNet-101. The figures with blue boxes are the results of the baseline and pink boxes are the results of our proposed CG-Net.
+![Attention module in HOFAM](/show/atten.png)
 
 
 
+## Experiment
 
-## demo
+|Method|Mean Dice|Recall|Precision|F-measure|Model Types|
+|HOFAM|0.9466|0.9661|0.9893|0.9776||
+
 
 You need download [checkpoint](https://drive.google.com/file/d/1RodI2WjeG7X28T1kSTRppGmvSX95CUO8/view?usp=sharing) first, and place it in checkpoint/(here)
 
