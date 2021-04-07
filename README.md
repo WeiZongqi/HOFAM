@@ -19,29 +19,27 @@ The structure of the proposed Hierarchical Optical Flow Attention Model (HOFAM).
 
 ## Experiment
 
-|Method|Mean Dice|Recall|Precision|F-measure|Model Types|
-|:---:|:---:|:---:|:---:|:---:|:---:|
-|HOFAM|0.9466|0.9661|0.9893|0.9776||
-
+|Method|Mean Dice|Recall|Precision|F-measure|
+|:---:|:---:|:---:|:---:|:---:|
+|HOFAM|0.9466|0.9661|0.9893|0.9776|
 
 You need download [checkpoint](https://drive.google.com/file/d/1RodI2WjeG7X28T1kSTRppGmvSX95CUO8/view?usp=sharing) first, and place it in checkpoint/(here)
 
+
+## dataset prepare
+Refer to [selflow](https://github.com/ppliuboy/SelFlow) to calculate different optical flows
 ```sh
-$ run main.py
+Merge vidoe frame + hierarchical optical flow + ground truth like dataset/demo_data/test_000155.png
+```
+Prepare and Generate tfrecode file
+```sh
+change data path and run tfrecode.py
 ```
 
 ## train and test
 
 ```sh
-1. If you want to train your own video dataset, you need to change your dataset same as dataset/demo_data/test_000155.png
-
-2. Generate tfrecode file: change data path and run tfrecode.py
-
-3. Change tfrecode file path in model.py line 137
-
-4. Change train and test dataset in model.py  line 209 and 659
-
-4. Change --phase(train or test) in main.py and run main.py
+$ run main.py
 ```
 
 ## Ablation Results
