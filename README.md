@@ -44,10 +44,22 @@ $ run main.py
 4. Change --phase(train or test) in main.py and run main.py
 ```
 
-## Structure
-The structure of the proposed Hierarchical Optical Flow Attention Model (HOFAM).
-![HOFAM](/show/hofam.png)
+## Ablation Results
+Hierarchical optical flow (orange border) and foreground segmentation results.
+![](/show/hop.png)
 
- Comparison to the baseline on DOTA for oriented object detection with ResNet-101. The figures with blue boxes are the results of the baseline and pink boxes are the results of our proposed CG-Net.
-![Attention module in HOFAM](/show/atten.png)
+Visualization of Attention Module results.
+![](/show/seg_atten.png)
 
+Comparison results of foreground segmentation of
+small objects with different losses.
+![](/show/seg_loss.png)
+
+## Cross-scene dataset Results
+Comparison results of different model on crossscene dataset LIMU. Each column has five images and there are video frame, segmented results of HOFAM, PSPNet,
+DeepLabV3+ and STAM, from left to right. Green: False Positive, Red: False Negative.
+![](/show/seg_limu.png)
+
+Comparison results of different Model on cross-scene
+dataset LASIESTA.
+![](/show/seg_la.png)
