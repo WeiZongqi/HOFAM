@@ -37,7 +37,16 @@ change data path and run tfrecode.py
 ```
 
 ## train and test
+parameters setting
+```sh
+1. Change tfrecode file path in model.py line 137
 
+2. Change train and test dataset in model.py  line 209 and 659
+
+3. Change --phase(train or test) in main.py and run main.py
+
+```
+start train or test
 ```sh
 $ run main.py
 ```
